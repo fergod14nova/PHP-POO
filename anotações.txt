@@ -1,0 +1,40 @@
+=============================
+TIPOS DE VISIBILIDADE
+=============================
++ -> Público
+- -> Privado
+# -> Protegido
+
++ -> Todas as classes podem ver e alterar
+- -> Somente a classe atual pode alterar, por meio de métodos
+# -> Acesso a classe atual e todas as sub-classes
+
+-----------------------
+ATENÇÃO:
+-----------------------
+Funções públicas(+) podem alterar o estado de atributos que estão protegidos(#)
+
+
+-----------------------
+Exemplo de classe
+-----------------------
+Classe Aluno
+  #nome
+  #dtNasc
+  #respo
+  +contato
+
+  #criar()
+  +editar()
+  +visualizar()
+  -excluir()
+
+MÉTODOS ACESSORES
+Getters -->Get --> é um método que busca (acessa) informações de atributos e garante a segurança deles
+Setters --> Set --> é um método que MODIFICA os atributos de uma classe
+
+Get é usado para ler
+Set é usado para gravar
+
+MÉTODO CONSTRUTOR
+Construct --> São usados para alterar o valor de um atributo de forma automática, assim que o objeto for instanciado, também podem receber parâmetros, OBS: na hora de instanciar é necessário passar os parâmetros.
