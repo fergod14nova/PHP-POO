@@ -13,7 +13,10 @@
   <title>PHP POO</title>
 
   <style>
-    #ex2 {
+    #ex1 {
+      display: none;
+    }
+    #ex2{
       display: none;
     }
   </style>
@@ -21,8 +24,10 @@
 <body>
   <div class="container">
   <h1>Treinando PHP POO</h1>
-  <h3>Básico</h3>
-
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam soluta possimus enim, eveniet quia quas ea pariatur quo inventore vero eos mollitia dignissimos in velit! Totam nobis odit at.</p>
+  
+  <div id="ex1">
+    <h3>Básico</h3>
   <?php
     require_once "class/caneta.php"; //chamando o arquivo que contém a classe
     $bic = new Caneta; //criando um OBJETO da classe CANETA com o nome 'bic'
@@ -41,9 +46,7 @@
     //mostrando as características do objeto
     print_r($bic);
   ?>
-  <br>
-  <br>
-  <hr>
+  </div>
 
   <div id='ex2'>
   <h3>Novo exemplo - Alterar cor do fundo</h3>
@@ -65,6 +68,22 @@
     $index_fundo->mudarCor(); //chamando o método mudarCor
 
   ?>
+  </div>
+  <div id="ex3">
+    <h3>Usando métodos GET e SET</h3>
+      <pre>
+        <?php
+          require_once "class/caneta.get.set.php";
+          $caneta = new CanetaNova("BOLSONARO","Azul",0.8);
+
+          print_r($caneta);
+          
+          echo "Na estrutura a seguir, o objeto da classe Caneta tem o Modelo <strong>"
+                .$caneta->getModelo()
+                ."</strong> e a ponta do tamanho: "
+                .$caneta->getPonta()." e está ";
+        ?>
+      </pre>
   </div>
   </div>
 </body>
