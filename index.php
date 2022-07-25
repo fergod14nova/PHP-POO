@@ -13,10 +13,7 @@
   <title>PHP POO</title>
 
   <style>
-    #ex1 {
-      display: none;
-    }
-    #ex2{
+    #ex1, #ex2, #ex3 {
       display: none;
     }
   </style>
@@ -84,6 +81,18 @@
                 .$caneta->getPonta()." e está ";
         ?>
       </pre>
+  </div>
+  <div>
+    <h3>SISTEMA DE CONTAS - EXERCÍCIO AULA 05</h3>
+    <?php require_once "class/conta.php";
+      $charles = new Conta("005", "CC", "Charles Augusto", 500);
+      echo "<pre>";
+      print_r($charles);
+      echo "</pre>";
+    ?>
+    
+
+    
   </div>
   </div>
 </body>
